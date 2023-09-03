@@ -8,10 +8,15 @@ create table client
 
  */
 
+drop table if exists clients;
+drop table if exists addresses;
+drop table if exists phones;
+drop sequence if exists  hibernate_sequence;
+
 -- Для @GeneratedValue(strategy = GenerationType.SEQUENCE)
 create sequence hibernate_sequence start with 1 increment by 1;
 
-create table client
+create table clients
 (
     id   bigint not null primary key,
     name varchar(50)
